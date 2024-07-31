@@ -25,7 +25,7 @@ export class PieComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.subscription = this.olympicService.getOlympics().subscribe(response => {
-      console.log('Données reçues:', response);
+      //console.log('Données reçues:', response); 
       this.olympics = response;
       if (this.olympics) {
         this.labels = this.olympics.map(country => country.country);
@@ -34,10 +34,10 @@ export class PieComponent implements OnInit, OnDestroy {
         });
         this.totalCountries = this.olympics.length;
         this.totalJOs = this.olympics.reduce((sum: number, country) => sum + country.participations.length, 0);
-        console.log('Labels:', this.labels);
+/*      console.log('Labels:', this.labels);
         console.log('Datas:', this.datas);
         console.log('Total JOs:', this.totalJOs);
-        console.log('Total Countries:', this.totalCountries);
+        console.log('Total Countries:', this.totalCountries); */
       }
       this.generateChart();
     });

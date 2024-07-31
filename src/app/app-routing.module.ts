@@ -12,23 +12,6 @@ const routes: Routes = [
   { path: '**', redirectTo: '' } // Redirige les chemins non trouvés vers la page d'accueil
 ];
 
-// const routes: Routes = [
-//   {
-//     path: '',
-//     component: HomeComponent,
-//   },
-//   { path: 'pie', 
-//     component: PieComponent,
-//   },
-//   { path: 'line/:country', 
-//     component: LineComponent,
-//   },
-//   {
-//     path: '**', // wildcard
-//     component: NotFoundComponent,
-//   },
-// ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
