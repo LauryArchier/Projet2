@@ -1,0 +1,21 @@
+<div class="content-container">
+  <div class="countryDisplay" *ngIf="participations.length > 0">
+    <h2>Voici les médailles pour le pays suivant : {{ country }}</h2>
+  </div>
+  <div *ngIf="participations.length === 0">
+    Pas de données pour ce pays.
+  </div>
+
+  <div class="stats-container">
+    <div class="rectangle">Nombre total de médailles : {{ totalMedals }}</div>
+    <div class="rectangle">Nombre total d'athlètes : {{ totalAthletes }}</div>
+  </div>
+
+  <div class="lineChart-container">
+    <canvas id="myLineChart" #myLineChart></canvas>
+  </div>
+
+  <div class="button-container">
+    <button (click)="goBack()">Retour</button>
+  </div>
+</div>

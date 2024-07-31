@@ -1,0 +1,92 @@
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.pieChart-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.rectangle {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  .content-container {
+    max-width: 35vw; /* Adjusted for screens 720p and above */
+  }
+}
+
+@media (max-width: 1024px) {
+  .content-container {
+    max-width: 50vw; /* Adjusted for medium screens */
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .rectangle {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    max-width: 70vw; /* Adjusted for small screens */
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .rectangle {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-container {
+    max-width: 90vw; /* Almost full width for very small screens */
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .rectangle {
+    font-size: 0.7em;
+  }
+}
